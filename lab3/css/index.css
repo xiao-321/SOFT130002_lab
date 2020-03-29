@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #000000;
+    background-color: #f6f6f6;
+}
+
+a {
+    color: #C0C0C0;
+    text-decoration:none;
+}
+a:hover{
+    color: #000000;
+}
+
+.home{
+    color: #000000;
+}
+/*header部分*/
+header {
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+    height: 70px;
+}
+
+#logo{
+    vertical-align: middle;
+}
+
+.navigation {
+    float: left;
+    margin: auto 3em;
+    padding-left: 100px;
+}
+.navigation a {
+    padding: 10px;
+}
+
+.account {
+    margin-right: 200px;
+    margin-top: 5px;
+    padding-right: 20px;
+    color: #000000;
+    float: right;
+}
+
+/*contents部分*/
+.contents{
+    padding: 10px;
+    margin: 20px 150px;
+    background-color: white;
+}
+
+.second-navigation{
+    display: inline;
+    display: flex;
+    text-align: center;
+}
+
+aside {
+    float:right;
+}
+
+section ul li h4{
+    font-weight:bold
+}
+section blockquote {
+    margin: 0;
+    width: 60%;
+    font-size: small;
+    padding: 0.7em;
+    color: #b8b6b4;
+    border-bottom: 1px solid rgba(85, 125, 171, 0.6)
+}
+
+.page{
+    width:200px;
+    margin:0 auto;
+    color: #b8b6b4;
+}
+
+.active{
+    color: #000000;
+}

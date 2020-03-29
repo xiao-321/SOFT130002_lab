@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #000000;
+    background-color: #f6f6f6;
+}
+
+a {
+    color: #000000;
+    text-decoration:none;
+}
+
+/*header部分*/
+header {
+    color: #000000;
+    background-color: #ffffff;
+    text-align: center;
+    margin: 0;
+    height: 70px;
+}
+
+.home {
+    margin-right: 200px;
+    margin-top: 5px;
+    padding-right: 20px;
+    color: #000000;
+    float: right;
+}
+
+/*h1中间过渡*/
+h1 {
+    margin: 0.5em 4.7em;
+}
+
+/*contents部分*/
+.contents{
+    padding: 10px;
+    margin: 20px 150px;
+    background-color: white;
+}
+
+input {
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 20%;
+    border: #56707f solid 1px;
+    border-radius: 3px;
+}
+
+textarea{
+    background-color: #ffffff;
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 45%;
+    border: #56707f solid 1px;
+    border-radius: 3px;
+}
+
+
+select {
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 200px;
+    border: #56707f solid 1px;
+}
+select:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.button{
+    color: #C0C0C0;
+}
+.button:hover{
+    color: #000000;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    width: 2em;
+}
+
+input[type="button"],input[type="submit"]  {
+    background-color: #ffffff;
+    border: #171a21 solid 1px;
+    width: 4em;
+}
+
+input[type="button"],input[type="submit"],input[type="checkbox"], input[type="radio"], select:hover {
+    cursor: pointer;
+}
+
+textarea {
+    height: 20em;
+}
