@@ -1,0 +1,38 @@
+/*nav部分*/
+.navbar-brand{
+    padding: 10px;
+}
+.logo-picture{
+    position: center;
+}
+
+/*carousel slide部分*/
+.carousel-example-generic{
+    background-color:  #ffffff;
+}
+.carousel-inner .item img{
+    position: center;
+    width: 100%;
+}
+.carousel-caption{
+    font-size: 25px;
+}
+
+/*footer部分*/
+footer{
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+.col-md-4{
+    text-align: center;
+}
+footer a{
+    color: #DDDDDD;
+}
+footer a:hover{
+     color: #ffffff;
+ }
+footer .row{
+    color: #ffffff;
+}

@@ -1,0 +1,4 @@
+header和footer部分根据pj1的设计进行了修改 
+
+轮转图片来源于朋友拍的照片 
+轮转图片外添加了bootstrap给定的样式 img-thumbnail
