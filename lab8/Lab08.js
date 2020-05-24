@@ -3,10 +3,14 @@
 /********************************************begin************************************/
 
 /*Global Variable Area */
+var wrap = document.querySelector(".wrap");
+var next = document.querySelector(".arrow_right");
+var prev = document.querySelector(".arrow_left");
+var index = 0;
+var numbers = document.getElementsByTagName("span");
+var container = document.querySelector(".container");
 
 /*********************************************end*************************************/
-
-
 
 /* 任务一
  * 请参考css中的style参数、html中的内容、下方的效果要求，然后在下面区域内编写代码。
@@ -22,7 +26,50 @@
  */
 /********************************************begin************************************/
 
-/*Code Here*/
+function next_pic () {
+    var newLeft;
+    if(wrap.style.left === "-3600px"){
+        newLeft = -1200;
+    }else{
+        newLeft = parseInt(wrap.style.left)-600;
+    }
+    wrap.style.left = newLeft + "px";
+    index++;
+    if(index > 4){
+        index = 0;
+    }
+    currentDot();
+}
+
+function prev_pic () {
+    var newLeft;
+    if(wrap.style.left === "0px"){
+        newLeft = -2400;
+    }else{
+        newLeft = parseInt(wrap.style.left)+600;
+    }
+    wrap.style.left = newLeft + "px";
+    index--;
+    if(index < 0){
+        index = 4;
+    }
+    currentDot();
+}
+
+function currentDot () {
+    for(var i = 0, length = numbers.length; i < length; i++){
+        numbers[i].className = "";
+    }
+    numbers[index].className = "on";
+}
+
+next.onclick = function () {
+    next_pic();
+};
+
+prev.onclick = function () {
+    prev_pic();
+};
 
 /*********************************************end*************************************/
 
@@ -39,7 +86,21 @@
  */
 /********************************************begin************************************/
 
-/*Code Here*/
+var timer = null;
+function autoPlay () {
+    timer = setInterval(function () {
+        next_pic();
+    },2000);
+}
+
+autoPlay();
+
+container.onmouseenter = function () {
+    clearInterval(timer);
+};
+container.onmouseleave = function () {
+    autoPlay();
+};
 
 /*********************************************end*************************************/
 
@@ -54,7 +115,22 @@
  */
 /********************************************begin************************************/
 
-/*Code Here*/
+for (var i = 0, len = numbers.length; i < len; i++){
+    (function(i){
+        numbers[i].onclick = function () {
+            var click = index - i;
+            if(index === 4 && parseInt(wrap.style.left)!==-3000){
+                click = click - 5;
+            }
+            if(index === 0 && parseInt(wrap.style.left)!== -600){
+                click = 5 + click;
+            }
+            wrap.style.left = (parseInt(wrap.style.left) +  click * 600)+"px";
+            index = i;
+            currentDot();
+        }
+    })(i);
+}
 
 /*********************************************end*************************************/
 
@@ -69,5 +145,22 @@
 /********************************************begin************************************/
 
 /*Code Here*/
+$(document).ready(function() {
+    $("td").click(function() {
+        let td = $(this);
+        let content = td.html();
+        td.html("<input type = 'text' class = 'currentInput' >");
+        let input = $('.currentInput');
+        input.attr({"value": content});
+        input.focus();
+        input.click(function() {
+            return false;
+        });
+        input.blur(function() {
+            let newContent = input.val();
+            td.html(newContent);
+        });
+    });
+});
 
 /*********************************************end*************************************/

@@ -68,3 +68,17 @@ a{
 .container .arrow:hover {
     background-color: rgba(0,0,0,0.2);
 }
+
+table{
+    margin : 25px auto 0 auto;
+    table-layout: fixed;
+}
+table td{
+    width : 162px;
+}
+#bd{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    background-color: #CCDDFF;
+}
